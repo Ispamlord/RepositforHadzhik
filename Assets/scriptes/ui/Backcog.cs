@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class backcog : MonoBehaviour
+public class Backcog : MonoBehaviour
 {
     Image backgroundImage;
     RectTransform rt;
