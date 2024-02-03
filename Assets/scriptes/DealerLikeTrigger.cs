@@ -5,14 +5,20 @@ using UnityEngine;
 public class DealerLikeTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int damageAmount = 10; // Значение урона, которое объект может нанести
+    public int damageAmount = 10; // Г‡Г­Г Г·ГҐГ­ГЁГҐ ГіГ°Г®Г­Г , ГЄГ®ГІГ®Г°Г®ГҐ Г®ГЎГєГҐГЄГІ Г¬Г®Г¦ГҐГІ Г­Г Г­ГҐГ±ГІГЁ
+    public bool shouldDamagePlayer = true;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageReceiver damageReceiver = collision.GetComponent<DamageReceiver>();
-        // Если объект имеет характеристику "damage", вызываем метод передачи урона
+        // Г…Г±Г«ГЁ Г®ГЎГєГҐГЄГІ ГЁГ¬ГҐГҐГІ ГµГ Г°Г ГЄГІГҐГ°ГЁГ±ГІГЁГЄГі "damage", ГўГ»Г§Г»ГўГ ГҐГ¬ Г¬ГҐГІГ®Г¤ ГЇГҐГ°ГҐГ¤Г Г·ГЁ ГіГ°Г®Г­Г 
         if (damageReceiver != null && !collision.isTrigger)
         {
-            damageReceiver.TakeDamage(damageAmount);
+            // (collision.name == "Player"&&!shouldDamagePlayer)
+            if (!((collision.name != "Player") || shouldDamagePlayer))
+            {
+                damageReceiver.TakeDamage(damageAmount);
+            }
+
         }
     }
 }
