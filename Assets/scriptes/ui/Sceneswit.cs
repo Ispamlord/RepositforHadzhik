@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Sceneswit : MonoBehaviour
+namespace scriptes.UI
 {
-    public void GoToSampleScene()
+    public class Sceneswit : MonoBehaviour
     {
-        SceneManager.LoadScene(0);
+        public void GoToSampleScene()
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
+
+
