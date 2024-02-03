@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public Transform player;
+    public Transform target;
     private Rigidbody2D rb;
     private Vector2 movement;
     private float speed = 5f;
@@ -20,14 +20,14 @@ public class EnemyMovement : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.name == target.name)
         {
             isMoving = false;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.name == target.name)
         {
             move();
             isMoving = true;
@@ -36,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
     }
     private void move()
     {
-        Vector2 direction = player.position - transform.position;
+        Vector2 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
         movement = direction;

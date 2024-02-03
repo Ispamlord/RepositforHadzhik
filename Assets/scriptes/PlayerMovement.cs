@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         move();
     }
+
     public void move()
     {
         moveVector.x = Input.GetAxisRaw("Horizontal");
