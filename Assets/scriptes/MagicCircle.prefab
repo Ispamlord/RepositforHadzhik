@@ -185,4 +185,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  shouldDamagePlayer: 1
+  shouldDamagePlayer: 0
