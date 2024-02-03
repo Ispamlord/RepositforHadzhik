@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace scriptes.UI
-{
-    public class Sceneswit : MonoBehaviour
-    {
-        public void GoToSampleScene()
-        {
-            SceneManager.LoadScene(0);
+namespace scriptes.UI{
+    public class Sceneswit : MonoBehaviour{
+        public int sceneid;
+        public void GoToSampleScene(){
+            SceneManager.LoadScene(sceneid);
         }
     }
 }
