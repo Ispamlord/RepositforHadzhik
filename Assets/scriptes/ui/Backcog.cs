@@ -8,9 +8,9 @@ namespace scriptes.UI
     [ExecuteInEditMode]
     public class Backcog : MonoBehaviour
     {
-        Image backgroundImage;
-        RectTransform rt;
-        float ratio;
+        private Image backgroundImage;
+        private RectTransform rt;
+        private float ratio;
 
         // Start is called before the first frame update
         void Start()
