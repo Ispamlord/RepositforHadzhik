@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class zdohnut : MonoBehaviour { 
+public class Zdohnut : MonoBehaviour { 
     void QuitButton()
     {
             Debug.Log("Game is exiting");
