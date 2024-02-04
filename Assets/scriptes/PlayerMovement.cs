@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");
         sp.flipX = moveVector.x < 0f;
-        
         rb.MovePosition(rb.position + moveVector * (speed * Time.deltaTime));
     }
 }
