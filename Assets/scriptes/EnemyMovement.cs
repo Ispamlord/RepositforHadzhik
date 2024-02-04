@@ -28,11 +28,11 @@ public class EnemyMovement : MonoBehaviour
 
         if (collision.name == target.name)
         {
-            Move();
+            move();
             isMoving = true;
         }
     }
-    private void Move()
+    private void move()
     {
         Vector2 direction = target.position - transform.position;
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
