@@ -18,8 +18,8 @@ public class ControlBall : MonoBehaviour
         moveVector.y = Input.GetAxisRaw("Vertical");
         rb.MovePosition(rb.position + moveVector * speed * Time.deltaTime);
     }
-    public void FixedUpdate()
-    {
-        
-    }
+    // public void FixedUpdate()
+    // {
+    //     
+    // }
 }

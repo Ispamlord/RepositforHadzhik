@@ -6,7 +6,7 @@ using UnityEngine;
 public class Weapone : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject otherObject;  // Другой объект, у которого вы хотите проверить flipX
+    public GameObject otherObject; 
     private SpriteRenderer otherSpriteRenderer;
     private Transform tr;
     Vector2 mv;
