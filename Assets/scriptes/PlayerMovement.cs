@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveVector;
     private BoxCollider2D boxCollider;
     private SpriteRenderer sp;
-    
-    void Start()
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -21,22 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-        move();
+        Move();
     }
 
-    public void move()
+    private void Move()
     {
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");
-        if(moveVector.x > 0f)
-        {
-            sp.flipX = false;
-        }
-        if (moveVector.x < 0f)
-        {
-            sp.flipX = true;
-        }
+        sp.flipX = moveVector.x < 0f;
         
-        rb.MovePosition(rb.position + moveVector * speed * Time.deltaTime);
+        rb.MovePosition(rb.position + moveVector * (speed * Time.deltaTime));
     }
 }

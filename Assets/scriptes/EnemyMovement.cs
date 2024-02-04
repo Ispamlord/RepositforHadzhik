@@ -25,14 +25,14 @@ public class EnemyMovement : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-
+    
         if (collision.name == target.name)
         {
-            move();
+            Move();
             isMoving = true;
         }
     }
-    private void move()
+    private void Move()
     {
         Vector2 direction = target.position - transform.position;
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -49,7 +49,7 @@ public class EnemyMovement : MonoBehaviour
     }
     private void MoveChar(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+        rb.MovePosition((Vector2)transform.position + (direction * (speed * Time.deltaTime)));
         
     }
 }

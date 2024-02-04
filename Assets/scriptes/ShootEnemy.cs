@@ -22,14 +22,14 @@ public class ShootEnemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (!CD)
-        {
-            fire();
-            CD = true;
-            Invoke("ResetMagic", couldown);
-        }
+
+        if (CD) return;
+        Fire();
+        CD = true;
+        Invoke(nameof(ResetMagic), couldown);
     }
-    public void fire()
+
+    private void Fire()
     {
          Vector2 direction = target.position - transform.position;
          //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

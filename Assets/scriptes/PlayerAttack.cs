@@ -8,16 +8,13 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        if (!Input.GetKeyDown(KeyCode.Space)) return;
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
            
-            Vector2 shootDirection = (mousePosition - shooter.firePoint.position).normalized;
+        Vector2 shootDirection = (mousePosition - shooter.firePoint.position).normalized;
 
-            shooter.Shoot(shootDirection);
-        }
+        shooter.Shoot(shootDirection);
     }
 }

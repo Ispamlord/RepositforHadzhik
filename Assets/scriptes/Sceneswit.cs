@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace scriptes.UI{
     public class Sceneswit : MonoBehaviour{
-        public int sceneid;
+        [FormerlySerializedAs("sceneid")] 
+        public int sceneId;
         public void GoToSampleScene(){
-            SceneManager.LoadScene(sceneid);
+            SceneManager.LoadScene(sceneId);
         }
     }
 }

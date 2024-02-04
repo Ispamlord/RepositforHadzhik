@@ -6,7 +6,7 @@ public class WeaponeController : MonoBehaviour
 {
     private Vector3 mousePosition;
     private Vector2 lookDirection;
-    void Update()
+    private void Update()
     {
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);

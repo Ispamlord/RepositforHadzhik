@@ -7,16 +7,14 @@ public class Sunduk : MonoBehaviour
     private bool gem = true;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision != null && collision.gameObject.name == "Player")
+        if (collision == null || collision.gameObject.name != "Player") return;
+        Inventory inventory = collision.gameObject.GetComponent<Inventory>();
+        if (inventory != null)
         {
-            Inventory inventory = collision.gameObject.GetComponent<Inventory>();
-            if (inventory != null)
-            {
-                open(inventory);
-            }
-        }   
+            Open(inventory);
+        }
     }
-    public void open(Inventory inv)
+    private void Open(Inventory inv)
     {
         inv.Healka++;
         GetComponent<BoxCollider2D>().enabled = false;
