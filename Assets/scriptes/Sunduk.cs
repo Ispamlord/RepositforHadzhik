@@ -19,5 +19,6 @@ public class Sunduk : MonoBehaviour
     public void open(Inventory inv)
     {
         inv.Healka++;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }

@@ -15,7 +15,6 @@ public class DealerLikeTrigger : MonoBehaviour
             {
                 damageReceiver.TakeDamage(damageAmount);
             }
-
         }
     }
 }
