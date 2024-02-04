@@ -14,9 +14,7 @@ public class ShootEnemy : MonoBehaviour
     {
         if (collision.name == target.name)
         {
-            //fire();
             shot = collision.transform.position;
-            
         }
     }
     private void Update()
