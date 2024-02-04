@@ -49,7 +49,7 @@ public class EnemyMovement : MonoBehaviour
     }
     private void MoveChar(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+        rb.MovePosition((Vector2)transform.position + (direction * (speed * Time.deltaTime)));
         
     }
 }

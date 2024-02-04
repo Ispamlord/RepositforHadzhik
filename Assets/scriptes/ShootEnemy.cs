@@ -26,9 +26,9 @@ public class ShootEnemy : MonoBehaviour
     {
         if (!CD)
         {
-            fire();
+            Fire();
             CD = true;
-            Invoke("ResetMagic", couldown);
+            Invoke("ResetMagic", cooldown);
         }
     }
 
