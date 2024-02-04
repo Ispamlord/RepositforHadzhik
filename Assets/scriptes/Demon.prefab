@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 979927161862974074}
   - component: {fileID: 457505419575205943}
   - component: {fileID: 1653693755655879595}
+  - component: {fileID: 4041095587560172275}
+  - component: {fileID: -3837882758955284524}
   m_Layer: 0
   m_Name: Demon
   m_TagString: Untagged
@@ -116,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441e3822ca808a9448771f545b0b7082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 7990028089701315927, guid: 44169b2f8b9b9714689a619621d77ea9, type: 3}
   shoot: {fileID: 5193565338888574312}
   CD: 0
   couldown: 5
@@ -200,6 +202,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
+--- !u!114 &4041095587560172275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4050136882046167209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e8a75023f7ef548b760cf81be9a7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &-3837882758955284524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4050136882046167209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0de537ce1de9ef4da53d111ae691f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
 --- !u!1 &4946165310314563231
 GameObject:
   m_ObjectHideFlags: 0

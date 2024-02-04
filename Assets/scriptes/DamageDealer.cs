@@ -5,8 +5,6 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour
 {
     public int damageAmount = 10; 
-
-    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         DamageReceiver damageReceiver = collision.gameObject.GetComponent<DamageReceiver>();
