@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1998009374050770215}
   - component: {fileID: 1979249799677508690}
   - component: {fileID: 1300638781652672876}
+  - component: {fileID: 1114387538983049579}
   m_Layer: 0
   m_Name: MagicCircle
   m_TagString: Untagged
@@ -185,4 +186,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  shouldDamagePlayer: 0
+--- !u!114 &1114387538983049579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5796357273987167177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68420f4eaf3625448a4cbda88c285192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 3640842646878952300, guid: 44169b2f8b9b9714689a619621d77ea9, type: 3}

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [HideInInspector]
     public GameObject owner;
 }

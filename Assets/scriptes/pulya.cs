@@ -6,7 +6,8 @@ public class pulya : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name != "Player" && !collision.isTrigger )
+        Character character = this.gameObject.GetComponent<Character>();
+        if (!collision.isTrigger && collision.gameObject != character.owner )
         {
             Destroy(gameObject);
         }

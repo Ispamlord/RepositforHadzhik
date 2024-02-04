@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sunduk : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private bool gem = true;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision != null && collision.gameObject.name == "Player")
