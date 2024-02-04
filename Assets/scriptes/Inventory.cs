@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int Healka = 0;
+    public int Heal = 20;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R) && Healka > 0)
+        {
+            DamageReceiver damageReceiver = GetComponent<DamageReceiver>();
+            damageReceiver.TakeDamage(-Heal);
+            Healka--;
+        }
     }
 }
