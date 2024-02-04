@@ -1,1 +1,1 @@
-# RepositforHadzhik
+# fuf u GTA, GTA for usa, fixika popravte, konsos
