@@ -20,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D collision)
     {
+        
         if (collision.name == target.name)
         {
             isMoving = false;
@@ -27,6 +28,7 @@ public class EnemyMovement : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+
         if (collision.name == target.name)
         {
             move();
@@ -41,7 +43,7 @@ public class EnemyMovement : MonoBehaviour
         direction.Normalize();
         movement = direction;
     }
-    
+        
     private void FixedUpdate()
     {
         if(isMoving) {
