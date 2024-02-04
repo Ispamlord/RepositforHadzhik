@@ -8,14 +8,11 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private float speed = 5f;
-    private CircleCollider2D circleCollider;
-    Collider2D coll;
     private bool isMoving = false;
     
-    void Start()
+    public void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        circleCollider = this.GetComponent<CircleCollider2D>();
     }
     
     private void OnTriggerExit2D(Collider2D collision)
@@ -34,12 +31,11 @@ public class EnemyMovement : MonoBehaviour
             move();
             isMoving = true;
         }
-
     }
     private void move()
     {
         Vector2 direction = target.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
         movement = direction;
     }
