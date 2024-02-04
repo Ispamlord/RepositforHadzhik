@@ -114,7 +114,7 @@ public class WGen : MonoBehaviour
         int updatedCount = Walkers.Count;
         for (int i = 0; i < updatedCount; i++)
         {
-            if (UnityEngine.Random.value < Walkers[i].ChanceToChange && Walkers.Count > 1)
+            if (UnityEngine.Random.value < Walkers[i].ChanceToAlter && Walkers.Count > 1)
             {
                 Walkers.RemoveAt(i);
                 break;
@@ -126,7 +126,7 @@ public class WGen : MonoBehaviour
     {
         for (int i = 0; i < Walkers.Count; i++)
         {
-            if (UnityEngine.Random.value < Walkers[i].ChanceToChange)
+            if (UnityEngine.Random.value < Walkers[i].ChanceToAlter)
             {
                 WObj curWalker = Walkers[i];
                 curWalker.Direction = GetDirection();
@@ -140,7 +140,7 @@ public class WGen : MonoBehaviour
         int updatedCount = Walkers.Count;
         for (int i = 0; i < updatedCount; i++)
         {
-            if (UnityEngine.Random.value < Walkers[i].ChanceToChange && Walkers.Count < MaximumWalkers)
+            if (UnityEngine.Random.value < Walkers[i].ChanceToAlter && Walkers.Count < MaximumWalkers)
             {
                 Vector2 newDirection = GetDirection();
                 Vector2 newPosition = Walkers[i].Position;
