@@ -26,7 +26,8 @@ public class Multishot : MonoBehaviour
             GameObject arrow = Instantiate(arrowPrefab, firePoint.position, Quaternion.Euler(0, 0, angle));
 
             Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
-
+            Character character = arrow.GetComponent<Character>();
+            character.owner = this.gameObject;
             Vector2 shootDirection = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
 
             rb.AddForce(shootDirection * arrowForce, ForceMode2D.Impulse);

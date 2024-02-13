@@ -18,9 +18,6 @@ public class Shoting : MonoBehaviour
         Character character = arrow.GetComponent<Character>();
         character.owner = this.gameObject;
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
-        
-        
-        rb.AddForce(shootDirection * arrowForce, ForceMode2D.Impulse);
+        rb.AddForce(firePoint.up * arrowForce, ForceMode2D.Impulse);
     }
-
 }

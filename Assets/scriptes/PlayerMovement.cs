@@ -9,13 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10f;
     private Rigidbody2D rb;
     private Vector2 moveVector;
-    private BoxCollider2D boxCollider;
     private SpriteRenderer sp;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
         sp = GetComponent<SpriteRenderer>();
     }
 
