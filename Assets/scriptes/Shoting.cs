@@ -14,7 +14,6 @@ public class Shoting : MonoBehaviour
     public void Shoot(Vector2 shootDirection)
     {
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
-
         Character character = arrow.GetComponent<Character>();
         character.owner = this.gameObject;
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
