@@ -14,25 +14,24 @@ public class ShootEnemy : MonoBehaviour
         if (collision.name == target.name)
         {
             shot = collision.transform.position;
+            if (target == null)
+            {
+                Destroy(gameObject);
+            }
+
+            if (CD) return;
+            Fire();
+            CD = true;
+            Invoke(nameof(ResetMagic), couldown);
         }
     }
     private void Update()
     {
-        if (target == null)
-        {
-            Destroy(gameObject);
-        }
-
-        if (CD) return;
-        Fire();
-        CD = true;
-        Invoke(nameof(ResetMagic), couldown);
     }
 
     private void Fire()
     {
          Vector2 direction = target.position - transform.position;
-         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
          direction.Normalize();
          shot = direction;
          shoot.Shoot(shot);
