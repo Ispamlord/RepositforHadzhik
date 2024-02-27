@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 public class ShootEnemy : MonoBehaviour
 {
-    public GameObject owner;
+    // public GameObject owner;
     public Transform target;
     public Shoting shoot;
     public bool CD = false;
