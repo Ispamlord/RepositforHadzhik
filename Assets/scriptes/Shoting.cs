@@ -10,7 +10,6 @@ public class Shoting : MonoBehaviour
     public Transform firePoint;
     public GameObject arrowPrefab;
     public float arrowForce = 20f;
-    private GameObject owner;
     public void Shoot(Vector2 shootDirection)
     {
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
