@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace scriptes.UI
+namespace scriptes.ui
 {
     [ExecuteInEditMode]
     public class Backcog : MonoBehaviour

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace scriptes{
+namespace scriptes.ui{
     public class Sceneswit : MonoBehaviour{
         public int sceneid;
         public void GoToSampleScene(){
