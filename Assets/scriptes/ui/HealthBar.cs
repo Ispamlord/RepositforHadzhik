@@ -12,8 +12,10 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         // Initialize 
-        healthBarImage = transform.Find("HealthBar").GetComponent<Image>();
+        
+        // healthBarImage = transform.Find("HealthBar").GetComponent<Image>();
         playerScript = FindObjectOfType<DamageReceiver>();
+        
         maxHealth = playerScript.health;
     }
 
@@ -24,6 +26,10 @@ public class HealthBar : MonoBehaviour
 
     private void UpdateHealthBar()
     {
+        // if (maxHealth == 0){
+        //     Debug.Log("Max health is zero");
+        // }
+
         // Ensure playerScript and healthBarImage are not null
         if (playerScript != null && healthBarImage != null)
         {

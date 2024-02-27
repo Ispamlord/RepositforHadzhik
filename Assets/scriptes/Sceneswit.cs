@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
-namespace scriptes.UI{
+namespace scriptes.ui{
     public class Sceneswit : MonoBehaviour{
         [FormerlySerializedAs("sceneid")] 
         public int sceneId;

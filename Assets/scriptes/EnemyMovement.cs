@@ -49,7 +49,7 @@ public class EnemyMovement : MonoBehaviour
         if(isMoving) {
             MoveChar(movement);
         }
-        
+            
     }
     private void MoveChar(Vector2 direction)
     {
