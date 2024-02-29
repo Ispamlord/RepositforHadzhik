@@ -5,16 +5,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
-    public float speed = 10f;
-    private Rigidbody2D rb;
-    private Vector2 moveVector;
-    private SpriteRenderer sp;
-
+    public float speed = 40f;
+    private Vector2 _moveVector;
+    private Rigidbody2D _rigidbody2D;
+    private SpriteRenderer _spriteRenderer;
+    private Vector2 _displacement;
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sp = GetComponent<SpriteRenderer>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     //public void Update()
