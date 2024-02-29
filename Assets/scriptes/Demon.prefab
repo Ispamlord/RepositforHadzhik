@@ -33,8 +33,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4050136882046167209}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.51, y: 0.16, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.287058, y: 23.49648, z: 0.66711223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441e3822ca808a9448771f545b0b7082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 7990028089701315927, guid: 44169b2f8b9b9714689a619621d77ea9, type: 3}
+  target: {fileID: 2517626335401025850, guid: 44169b2f8b9b9714689a619621d77ea9, type: 3}
   shoot: {fileID: 5193565338888574312}
   CD: 0
   couldown: 5
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8808939be218044805677af1e78cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 7990028089701315927, guid: 44169b2f8b9b9714689a619621d77ea9, type: 3}
+  target: {fileID: 2517626335401025850, guid: 44169b2f8b9b9714689a619621d77ea9, type: 3}
 --- !u!114 &1712628936259363423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3fb0da530bc424e8f02ef38edce6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 7990028089701315927, guid: 44169b2f8b9b9714689a619621d77ea9, type: 3}
+  target: {fileID: 2517626335401025850, guid: 44169b2f8b9b9714689a619621d77ea9, type: 3}
 --- !u!58 &2609108618374528421
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -403,4 +403,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 7
