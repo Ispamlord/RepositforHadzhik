@@ -17,12 +17,12 @@ public class PlayerMovement : MonoBehaviour
         sp = GetComponent<SpriteRenderer>();
     }
 
-    public void Update()
-    {
-        Move();
-    }
+    //public void Update()
+    //{
+    //    Move();
+    //}
 
-    private void Move()
+    public void Move()
     {
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");

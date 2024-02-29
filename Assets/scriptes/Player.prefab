@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1730948473717659238}
   - component: {fileID: 2572107582705658758}
   - component: {fileID: 3706679309304673311}
+  - component: {fileID: 600681674691433760}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -191,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthBar: {fileID: 0}
 --- !u!114 &1730948473717659238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +236,18 @@ MonoBehaviour:
   firePoint: {fileID: 1945604090605752066}
   arrowPrefab: {fileID: 5796357273987167177, guid: 633f8e73ca7359648ad6f59a1c4641d0, type: 3}
   arrowForce: 20
+--- !u!114 &600681674691433760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3640842646878952300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c222fb01a45984d971d262f7891c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5291995572543010821
 GameObject:
   m_ObjectHideFlags: 0

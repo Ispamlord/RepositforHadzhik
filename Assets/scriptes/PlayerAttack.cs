@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
     {
         shooter = GetComponent<Shoting>();
     }
-    private void Update()
+    public void Attack()
     {
         if (!Input.GetKeyDown(KeyCode.Space)) return;
         Vector3 mousePosition = Input.mousePosition;

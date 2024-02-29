@@ -19,14 +19,14 @@ public class EnemyMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         
-        if (collision.name == target.name)
+        if (collision.name == target.name&& target!=null)
         {
             isMoving = false;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.name == target.name)
+        if (collision.name == target.name && target != null)
         {
             Move();
             isMoving = true;
