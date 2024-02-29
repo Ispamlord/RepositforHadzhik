@@ -24,9 +24,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move()
     {
-        moveVector.x = Input.GetAxisRaw("Horizontal");
-        moveVector.y = Input.GetAxisRaw("Vertical");
-        sp.flipX = moveVector.x < 0f;
-        rb.MovePosition(rb.position + moveVector * (speed * Time.deltaTime));
+        _moveVector.x = Input.GetAxisRaw("Horizontal");
+        _moveVector.y = Input.GetAxisRaw("Vertical");
+        _spriteRenderer.flipX = _moveVector.x < 0f;
+        _displacement = _moveVector.normalized * Time.deltaTime;
+        _displacement.x = _displacement.x > 0.002 || _displacement.x < -0.002 ? 0.002f * _moveVector.x : _displacement.x;
+        _displacement.y = _displacement.y > 0.002 || _displacement.y < -0.002 ? 0.002f * _moveVector.y : _displacement.y;
+        _rigidbody2D.MovePosition(_rigidbody2D.position + _displacement * speed);
     }
 }
