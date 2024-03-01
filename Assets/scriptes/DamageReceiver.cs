@@ -1,3 +1,4 @@
+using scriptes.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,19 @@ public class DamageReceiver : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        GetComponent<DamageReceiver>().enabled = false;
+        if (gameObject.name == "Player")
+        {
+            GetComponent<Player>().enabled = false;
+            Sceneswit sceneswit = new Sceneswit();
+            sceneswit.sceneId = 0;
+            sceneswit.GoToSampleScene();
+            //Destroy(FindAnyObjectByType(GameObject.Find(Enemys)));
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }
